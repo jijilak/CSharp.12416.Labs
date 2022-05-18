@@ -1,0 +1,22 @@
+Microsoft Visual Studio Solution File, Format Version 7.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rational", "Rational.csproj", "{49DAC9D3-695D-46A1-96EF-8F3EF238A773}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+	ProjectSection(SolutionConfiguration) = postProject
+		Debug.ActiveCfg = Debug|.NET
+		Debug.Build.0 = Debug|.NET
+		Release.ActiveCfg = Release|.NET
+		Release.Build.0 = Release|.NET
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		ConfigName.0 = Release
+		ConfigName.1 = Debug
+		DoSign = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

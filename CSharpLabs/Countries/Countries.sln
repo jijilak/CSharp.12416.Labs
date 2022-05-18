@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29025.244
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CountriesForms", "Countries\CountriesForms.csproj", "{7CB4720D-7495-468F-ADB3-9D7F1CAA8857}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CountriesData", "CountriesData\CountriesData.csproj", "{F0CEE582-F7A7-4D94-8E8E-786DED42C86E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7CB4720D-7495-468F-ADB3-9D7F1CAA8857}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7CB4720D-7495-468F-ADB3-9D7F1CAA8857}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7CB4720D-7495-468F-ADB3-9D7F1CAA8857}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7CB4720D-7495-468F-ADB3-9D7F1CAA8857}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F0CEE582-F7A7-4D94-8E8E-786DED42C86E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F0CEE582-F7A7-4D94-8E8E-786DED42C86E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F0CEE582-F7A7-4D94-8E8E-786DED42C86E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F0CEE582-F7A7-4D94-8E8E-786DED42C86E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7F24A81C-9D47-4AA7-B3DA-819B049F3E0D}
+	EndGlobalSection
+EndGlobal
