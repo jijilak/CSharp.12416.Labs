@@ -12,6 +12,24 @@ class CreateAccount
         acc3 = new BankAccount(100);
         acc4 = new BankAccount(AccountType.Deposit, 500);
 
+        Console.WriteLine("Account info:\n");
+
+        Write(acc1);
+        Write(acc2);
+        Write(acc3);
+        Write(acc4);
+
+        acc1.Deposit(8);
+        acc1.Withdraw(7);
+        acc2.Deposit(6);
+        acc2.Withdraw(5);
+        acc3.Deposit(4);
+        acc3.Withdraw(3);
+        acc4.Deposit(2);
+        acc4.Withdraw(1);
+
+        Console.WriteLine("\nAccount info after transactions:\n");
+
         Write(acc1);
         Write(acc2);
         Write(acc3);
@@ -22,5 +40,12 @@ class CreateAccount
         Console.WriteLine("Account number is {0}",  acc.Number());
         Console.WriteLine("Account balance is {0}", acc.Balance());
         Console.WriteLine("Account type is {0}", acc.Type());
+        //Console.WriteLine("Transactions:");
+
+        foreach (BankTransaction tran in acc.Transactions())
+        {
+            Console.WriteLine("Date/Time: {0}\tAmount: {1}", tran.When(), tran.Amount());
+            Console.WriteLine("Transactions:");
+        }
     }
 }

@@ -29,6 +29,7 @@
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <UpgradeBackupLocation>
     </UpgradeBackupLocation>
+    <ProjectGuid>{AE64DDB7-892C-4C58-AF09-1FF08C7CA0A9}</ProjectGuid>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <OutputPath>bin\Debug\</OutputPath>
@@ -87,6 +88,7 @@
     <Compile Include="BankAccount.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="BankTransaction.cs" />
     <Compile Include="CreateAccount.cs">
       <SubType>Code</SubType>
     </Compile>

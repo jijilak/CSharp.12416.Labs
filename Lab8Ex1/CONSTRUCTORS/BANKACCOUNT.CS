@@ -1,4 +1,4 @@
-
+using System.Collections;
 class BankAccount 
 {
     private long accNo;
@@ -6,8 +6,9 @@ class BankAccount
     private AccountType accType;
     
     private static long nextNumber = 123;
+    private Queue tranQueue = new Queue();
 
-    public BankAccount()
+    public BankAccount ()
     {
         accNo = NextNumber();
         accBal = 0;
@@ -32,18 +33,25 @@ class BankAccount
         accType = aType;
         accBal = aBal;
     }
-    public void Populate(decimal balance)
+    //public void Populate(decimal balance)
+    //{
+    //    accNo = NextNumber();
+    //    accBal = balance;
+    //    accType = AccountType.Checking;
+    //}
+    public Queue Transactions()
     {
-        accNo = NextNumber();
-        accBal = balance;
-        accType = AccountType.Checking;
+        return tranQueue;
     }
 
     public bool Withdraw(decimal amount)
     {
         bool sufficientFunds = accBal >= amount;
-        if (sufficientFunds) {
+        if (sufficientFunds)
+        {
             accBal -= amount;
+            BankTransaction tran = new BankTransaction(-amount);
+            tranQueue.Enqueue(tran);
         }
         return sufficientFunds;
     }
@@ -51,6 +59,8 @@ class BankAccount
     public decimal Deposit(decimal amount)
     {
         accBal += amount;
+        BankTransaction tran = new BankTransaction(amount);
+        tranQueue.Enqueue(tran);
         return accBal;
     }
     
