@@ -18,8 +18,8 @@ namespace CSharp
         public static void InnerMain(string[] args)
         {
             SourceFile source = new SourceFile(args[0]);
-            
-            // Add code here...
+            HTMLTokenVisitor visitor = new HTMLTokenVisitor();
+            source.Accept(visitor);
         }
     }
 }
