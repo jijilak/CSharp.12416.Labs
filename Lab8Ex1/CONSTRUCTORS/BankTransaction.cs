@@ -5,21 +5,21 @@ using System.Text;
 
 class BankTransaction
 {
-    private readonly decimal amount;
-    private readonly DateTime when;
-    public decimal Amount();
-{
+    private decimal amount;
+    private DateTime when;
+    public decimal Amount()
+    {
     return amount;
-}
-public DateTime When()
-{
+    }
+    public DateTime When()
+    {
     return when;
-}
-public BankTransaction(decimal tranAmount)
-{
+    }
+    public BankTransaction (decimal tranAmount)
+    {
     amount = tranAmount;
     when = DateTime.Now;
-}
+    }
 }
 
 
