@@ -4,7 +4,7 @@ using System.Collections;
 
 namespace Banking
 {
-	sealed public class BankAccount : IDisposable
+	sealed public class BankAccount
 	{
 		private long accNo;
 		private decimal accBal;
@@ -21,18 +21,21 @@ namespace Banking
 			accType = AccountType.Checking;
 			accBal = 0;
 		}
+
 		internal BankAccount(AccountType aType)
 		{
 			accNo = NextNumber();
 			accType = aType;
 			accBal = 0;
 		}
+
 		internal BankAccount(decimal aBal)
 		{
 			accNo = NextNumber();
 			accType = AccountType.Checking;
 			accBal = aBal;
 		}
+
 		internal BankAccount(AccountType aType, decimal aBal)
 		{
 			accNo = NextNumber();
@@ -41,6 +44,7 @@ namespace Banking
 		}
 
 		// Dispose Method
+
 		public void Dispose()
 		{
 			if (!disposed)
@@ -59,6 +63,7 @@ namespace Banking
 				GC.SuppressFinalize(this);
 			}
 		}
+
 		public bool Withdraw(decimal amount)
 		{
 			bool sufficientFunds = accBal >= amount;

@@ -1,5 +1,5 @@
-using System;
 using Banking;
+using System;
 
 class CreateAccount
 {
@@ -8,16 +8,15 @@ class CreateAccount
     {
 		Console.WriteLine("Sid's Account");
 		long sidsAccNo = Bank.CreateAccount();
-		BankAccount sids = Bank.GetAccount(sidsAccNo);
+		Banking.BankAccount sids = Bank.GetAccount(sidsAccNo);
 		TestDeposit(sids);
 		TestWithdraw(sids);
 		Write(sids);
 		if (Bank.CloseAccount(sidsAccNo))
-			Console.WriteLine("Account closed");
+			Console.WriteLine("Account Closed");
 		else
 			Console.WriteLine("Something went wrong closing the account");
-		//sids.Dispose();
-	}
+    }
 
 	static void TestDeposit(Banking.BankAccount acc)
 	{
@@ -32,7 +31,7 @@ class CreateAccount
 		decimal amount = decimal.Parse(Console.ReadLine());
 		acc.Withdraw(amount);   
 	}
-
+      
     static void Write(Banking.BankAccount acc)
     {
         Console.WriteLine("Account number is {0}",  acc.Number());
